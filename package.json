@@ -1,0 +1,22 @@
+{
+  "name": "static-site-env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hltree/static-site-env.git"
+  },
+  "author": "hltree",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hltree/static-site-env/issues"
+  },
+  "homepage": "https://github.com/hltree/static-site-env#readme",
+  "devDependencies": {
+    "webpack": "^4.41.4"
+  }
+}
