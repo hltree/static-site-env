@@ -1,5 +1,9 @@
 # Static Site Env
 
+## About
+
+Static site environment
+
 ## Requirements
 
 Node v13.5<br />
