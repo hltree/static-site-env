@@ -10,14 +10,14 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
     background:transparent;
+    border:0;
+    box-sizing: border-box;
+    font-size:100%;
+    margin:0;
+    outline:0;
+    padding:0;
+    vertical-align:baseline;
 }
 
 body {
@@ -43,11 +43,11 @@ q:before, q:after {
 }
 
 a {
+    background:transparent;
+    font-size:100%;
     margin:0;
     padding:0;
-    font-size:100%;
     vertical-align:baseline;
-    background:transparent;
 }
 
 ins {
@@ -78,10 +78,10 @@ table {
 }
 
 hr {
-    display:block;
-    height:1px;
     border:0;
     border-top:1px solid #cccccc;
+    display:block;
+    height:1px;
     margin:1em 0;
     padding:0;
 }

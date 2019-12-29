@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const StylelintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -63,6 +64,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/pug/index.pug'
+        }),
+        new StylelintPlugin({
+            configFile: '.stylelintrc.yml'
         }),
         new MiniCssExtractPlugin()
     ]
