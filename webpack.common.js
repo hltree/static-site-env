@@ -1,8 +1,10 @@
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
+const globule = require('globule')
 
-module.exports = {
+const app = {
     entry: {
         'main.js': './src/js/main.js',
         'style.css': './src/scss/style.scss',
@@ -46,6 +48,7 @@ module.exports = {
                             sourceMap: true
                         }
                     },
+                    'import-glob-loader',
                     {
                         loader: 'postcss-loader',
                         options: {
@@ -62,12 +65,25 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/pug/index.pug'
-        }),
         new StylelintPlugin({
             configFile: '.stylelintrc.yml'
         }),
         new MiniCssExtractPlugin()
     ]
 }
+
+const documents = globule.find(
+    './src/pug/*.pug'
+)
+
+documents.forEach((document) => {
+    const fileName = document.replace('./src/pug/', '').replace('.pug', '.html')
+    app.plugins.push(
+        new HtmlWebpackPlugin({
+            filename: `${fileName}`,
+            template: document,
+        })
+    )
+})
+
+module.exports = app
