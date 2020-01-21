@@ -40,3 +40,16 @@ or
 
 $ npm run build
 ```
+
+## Documentation
+
+CSS設計には[flocss](https://github.com/hiloki/flocss)を採用。
+<br />
+<br />
+CSSの命名規則は{flocss接頭辞 + キャメルケース}とする。
+<br />
+ex: c-spnavi
+<br />
+<br />
+JSに利用するクラスの命名は{js-$fooo}とする。また、このクラスに基本的にスタイルは当てない。
+
