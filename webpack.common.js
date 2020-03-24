@@ -61,6 +61,14 @@ const app = {
             {
                 test: /\.pug$/,
                 use: 'pug-loader'
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg|ico)$/i,
+                loader: 'url-loader',
+                options: {
+                    limit: 2048,
+                    name: './src/images/[name].[ext]'
+                }
             }
         ]
     },
