@@ -6,7 +6,7 @@ const globule = require('globule')
 
 const app = {
   entry: {
-    'bundle.js': './src/js/main.js',
+    'bundle.js': './src/js/index.ts',
     'style': './src/scss/style.scss',
     'index': './src/pug/index.pug'
   },
@@ -14,8 +14,15 @@ const app = {
     path: `${__dirname}/dist`,
     filename: '[name]'
   },
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader'
+      },
       {
         test: /\.js$/,
         use: [
