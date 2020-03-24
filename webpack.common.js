@@ -6,7 +6,7 @@ const globule = require('globule')
 
 const app = {
     entry: {
-        'main.js': './src/js/main.js',
+        'bundle.js': './src/js/main.js',
         'style': './src/scss/style.scss',
         'index': './src/pug/index.pug'
     },
