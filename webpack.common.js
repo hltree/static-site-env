@@ -7,8 +7,8 @@ const globule = require('globule')
 const app = {
     entry: {
         'main.js': './src/js/main.js',
-        'style.css': './src/scss/style.scss',
-        'index.pug': './src/pug/index.pug'
+        'style': './src/scss/style.scss',
+        'index': './src/pug/index.pug'
     },
     output: {
         path: `${__dirname}/dist`,
